@@ -4,18 +4,49 @@
       <div class="col-xs-12">
         <h1>Welcome <%= @user.name %></h1>
         <%# FIXME %>
+        <!--
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com//embed/91XPH_6pL_0"></iframe>
+        </div>
+        -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3>Capture #1</h3>
+          </div>
+          <div class="panel-body">
+            <%= simple_form_for :capture, html: { name: 'c1' } do |f| %>
+              <%= f.input :img, as: :file, input_html: { accept: 'image/*', capture: 'camera' } %>
+              <%= f.button :submit, class: 'js-submit-button' %>
+            <% end %>
+          </div>        
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="col-xs-12">
-      <h1>asd</h1>
-    </div>
-  </div>
-</section>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  jQuery('input.js-submit-button').on('click', function(e) {
+    e.preventDefault();
+
+    file = document.getElementById('capture_img').files[0];
+
+    if (file) {
+      fr = new FileReader();
+
+      fr.readAsBinaryString(file);
+
+      fr.onload = function(e) {
+        //jQuery.post
+      }
+    }
+
+    console.log('clicked!')
+  })
+})
+</script>
