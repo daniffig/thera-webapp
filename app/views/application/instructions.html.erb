@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-xs-12">
         <h1>Welcome <%= @user.name %></h1>
-        <%# FIXME %>
-        <!--
+        <p><%= @user.id %></p>
+        <!-- FIXME
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com//embed/91XPH_6pL_0"></iframe>
         </div>
@@ -18,9 +18,9 @@
             <h3>Capture #1</h3>
           </div>
           <div class="panel-body">
-            <%= simple_form_for :capture, html: { name: 'c1' } do |f| %>
-              <%= f.input :img, as: :file, input_html: { accept: 'image/*', capture: 'camera' } %>
-              <%= f.button :submit, class: 'js-submit-button' %>
+            <%= simple_form_for :photo, html: { id: @form_id } do |f| %>
+              <%= f.input :file, as: :file, input_html: { accept: 'image/*', capture: 'camera' } %>
+              <button type="button" class="ajax-send-button" data-form-id="<%= @form_id %>">Send</button>
             <% end %>
           </div>        
         </div>
@@ -31,22 +31,29 @@
 
 <script type="text/javascript">
 jQuery(document).ready(function() {
-  jQuery('input.js-submit-button').on('click', function(e) {
+  jQuery('button.ajax-send-button').on('click', function (e) {
     e.preventDefault();
 
-    file = document.getElementById('capture_img').files[0];
+    $id = $(e.target).data('form-id');
 
-    if (file) {
-      fr = new FileReader();
+    $form = $('form#' + $id);
 
-      fr.readAsBinaryString(file);
+    $file = $form.find('#photo_file')[0].files[0];
 
-      fr.onload = function(e) {
-        //jQuery.post
-      }
+    if ($file) {
+      formData = new FormData();
+
+      formData.append('photo[id]', $id);
+      formData.append('photo[file]', $file);
+      
+      $.ajax({
+        url: 'photos/new',
+        data: formData,
+        contentType: false,
+        processData: false,
+        method: 'POST'
+      })
     }
-
-    console.log('clicked!')
   })
 })
 </script>

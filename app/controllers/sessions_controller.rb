@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_or_create_by(user_params)
+    @user = User.find_or_create_by(user_params.merge({ id: session[:session_id] }))
 
     session[:user] = @user
 

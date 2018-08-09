@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/instructions', to: 'application#instructions'
 
+  post '/photos/new', to: 'application#photo'
+
   namespace :sessions do
     get 'new'
     post 'create'
