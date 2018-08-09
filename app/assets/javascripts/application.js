@@ -17,4 +17,5 @@
 //= require turbolinks
 //= require twitter/bootstrap
 //= require bootstrap
+//= require fullpage
 //= require_tree .

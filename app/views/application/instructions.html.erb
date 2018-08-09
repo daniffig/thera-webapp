@@ -1,4 +1,4 @@
-<section>
+<section class="section">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -20,7 +20,7 @@
           <div class="panel-body">
             <%= simple_form_for :photo, html: { id: @form_id } do |f| %>
               <%= f.input :file, as: :file, input_html: { accept: 'image/*', capture: 'camera' } %>
-              <button type="button" class="ajax-send-button" data-form-id="<%= @form_id %>">Send</button>
+              <button type="button" class="submit-photo-button" data-form-id="<%= @form_id %>">Send</button>
             <% end %>
           </div>        
         </div>
@@ -28,32 +28,3 @@
     </div>
   </div>
 </section>
-
-<script type="text/javascript">
-jQuery(document).ready(function() {
-  jQuery('button.ajax-send-button').on('click', function (e) {
-    e.preventDefault();
-
-    $id = $(e.target).data('form-id');
-
-    $form = $('form#' + $id);
-
-    $file = $form.find('#photo_file')[0].files[0];
-
-    if ($file) {
-      formData = new FormData();
-
-      formData.append('photo[id]', $id);
-      formData.append('photo[file]', $file);
-      
-      $.ajax({
-        url: 'photos/new',
-        data: formData,
-        contentType: false,
-        processData: false,
-        method: 'POST'
-      })
-    }
-  })
-})
-</script>
