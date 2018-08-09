@@ -1,26 +1,19 @@
 class ApplicationController < ActionController::Base
-  before_action :set_user, only: [:instructions, :photo]
-
-  def instructions
-    @form_id = 'photo_01'
-  end
-
-  def photo
-    uploader = PhotoUploader.new @user
-    uploader.new_filename = photo_params[:id]
-
-    file = photo_params[:file]
-
-    uploader.store! file
-  end
 
   private
 
-  def photo_params
-    params.require(:photo).permit(:id, :file)
+  def current_user
+    return unless session[:user_id]
+
+    @current ||= User.find(session[:user_id])
   end
 
-  def set_user
-    @user = User.find_by session[:user]
+  def sign_in(user)
+    user.sign_in(session)
   end
+
+  def user_signed_in?
+    current_user.present?
+  end
+
 end

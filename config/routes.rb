@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get '/instructions', to: 'application#instructions'
+  resources :photos, only: [:index, :create], format: false
+  resources :users, only: [:new, :create], format: false
 
-  post '/photos/new', to: 'application#photo'
-
-  namespace :sessions do
-    get 'new'
-    post 'create'
-  end
-
-  root 'sessions#new'
+  root 'users#new'
 end

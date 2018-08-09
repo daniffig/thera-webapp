@@ -2,6 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
+        <%= User.all.collect { |u| u.name }.to_s %>
         <h1>Welcome <%= @user.name %></h1>
         <p><%= @user.id %></p>
         <!-- FIXME
@@ -18,9 +19,11 @@
             <h3>Capture #1</h3>
           </div>
           <div class="panel-body">
-            <%= simple_form_for :photo, html: { id: @form_id } do |f| %>
-              <%= f.input :file, as: :file, input_html: { accept: 'image/*', capture: 'camera' } %>
-              <button type="button" class="submit-photo-button" data-form-id="<%= @form_id %>">Send</button>
+            <%= simple_form_for @user.photos.new do |f| %>
+              <%= f.input :exercise_id, as: :hidden, input_html: { value: 1 } %>
+              <%= f.input :stage_id, as: :hidden, input_html: { value: 1 } %>
+              <%= f.input :photo, as: :file, input_html: { accept: 'image/*', capture: 'camera' } %>
+              <button type="button" class="submit-photo-button">Send</button>
             <% end %>
           </div>        
         </div>

@@ -18,4 +18,5 @@
 //= require twitter/bootstrap
 //= require bootstrap
 //= require fullpage
+//= require js-routes
 //= require_tree .
