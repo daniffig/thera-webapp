@@ -12,11 +12,8 @@
 
 ActiveRecord::Schema.define(version: 2018_08_09_144311) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "photos", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.integer "exercise_id", null: false
     t.integer "stage_id", null: false
     t.string "photo", null: false
