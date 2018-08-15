@@ -63,6 +63,7 @@ end
 gem 'carrierwave'
 gem 'figaro'
 gem 'fog-aws'
+gem 'font-awesome-rails'
 gem 'fullpage-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

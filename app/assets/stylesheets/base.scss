@@ -68,7 +68,7 @@ body {
 
   font-family: 'Bebas Neue';
   font-weight: normal;
-  font-size: 144px;
+  font-size: 24vh;
 }
 
 .tryme3 {
@@ -107,4 +107,30 @@ body {
 .professor-thera-img {
 
   max-height: 60vh;
+}
+
+@keyframes slide-down {
+
+  from {
+    opacity: 0.1;
+    top: 0;
+  }
+
+  to {
+    opacity: 1;
+    top: -20px;
+  }
+}
+
+.slide-down-img {
+
+  animation-name: slide-down;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+  position: relative;
+  
+  font-size: 8vh;
+
+  color: $gc2;
 }
