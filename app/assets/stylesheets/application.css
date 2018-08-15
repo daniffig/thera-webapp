@@ -16,5 +16,6 @@
  *= require fonts
  *= require spin
  *= require base
+ *= require bootstrap_and_overrides
  *= require_self
  */

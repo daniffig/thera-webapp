@@ -1,0 +1,32 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Static version of css will use Glyphicons sprites by default
+  =require twitter-bootstrap-static/sprites
+*/
+
+h1, h2 {
+
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+
+  text-align: justify
+}
+
+
+
+$gc1: #61892f;
+$gc2: #86c232;
+$gc3: #222629;
+$gc4: #474b4f;
+$gc5: #6b6e70;
+
+.btn.btn-default {
+
+  background-color: $gc2;
+  color: white;  
+  font-weight: bolder;
+}

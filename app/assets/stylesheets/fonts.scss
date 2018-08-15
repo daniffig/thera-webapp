@@ -1,48 +1,4 @@
 
-@font-face {
-
-  font-family: 'Fh Space';
-  font-weight: 400;
-  font-style: normal;
-  src: font-url('fh_space/Fh_Space.otf') format('opentype');
-}
-
-@font-face {
-
-  font-family: 'Letters for Learners';
-  font-weight: 400;
-  font-style: normal;
-  src: font-url('letters_for_learners/Letters_for_Learners.ttf') format('truetype');
-}
-
-/* Roboto - BEGIN */
-
-@font-face {
-
-  font-family: 'Roboto';
-  font-weight: 100;
-  font-style: normal;
-  src: font-url('roboto/Roboto-Thin.ttf') format('truetype');
-}
-
-@font-face {
-
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-style: normal;
-  src: font-url('roboto/Roboto-Regular.ttf') format('truetype');
-}
-
-/* Roboto - END */
-
-@font-face {
-
-  font-family: 'Teen';
-  font-weight: 400;
-  font-style: normal;
-  src: font-url('teen/teen.ttf') format('truetype');
-}
-
 /* Bebas Neue - BEGIN */
 
 @font-face {
@@ -55,139 +11,86 @@
 
 /* Bebas Neue - END */
 
-/* Code - BEGIN */
+/* Lato - BEGIN */
 
 @font-face {
 
-  font-family: 'Code';
-  font-weight: lighter;
-  font-style: normal;
-  src: font-url('code/CODE_Light.otf') format('opentype');
-}
-
-@font-face {
-
-  font-family: 'Code';
-  font-weight: bold;
-  font-style: normal;
-  src: font-url('code/CODE_Bold.otf') format('opentype');
-}
-
-/* Code - END */
-
-/* LemonMilk - BEGIN */
-
-@font-face {
-
-  font-family: 'LemonMilk';
-  font-weight: 100;
-  font-style: normal;
-  src: font-url('lemon_milk/LemonMilklight.otf') format('opentype');
-}
-
-@font-face {
-
-  font-family: 'LemonMilk';
-  font-weight: 400;
-  font-style: normal;
-  src: font-url('lemon_milk/LemonMilk.otf') format('opentype');
-}
-
-@font-face {
-
-  font-family: 'LemonMilk';
-  font-weight: 700;
-  font-style: normal;
-  src: font-url('lemon_milk/LemonMilkbold.otf') format('opentype');
-}
-
-/* LemonMilk - END */
-
-
-/* Heading - BEGIN */
-
-@font-face {
-
-  font-family: 'Heading';
-  font-weight: 100;
-  font-style: normal;
-  src: font-url('heading/Heading-Pro-Thin-trial.ttf') format('truetype');
-}
-
-@font-face {
-
-  font-family: 'Heading';
+  font-family: 'Lato';
   font-weight: 200;
   font-style: normal;
-  src: font-url('heading/Heading-Pro-ExtraLight-trial.ttf') format('truetype');
+  src: font-url('lato/Lato-Hairline') format('truetype');
 }
 
 @font-face {
 
-  font-family: 'Heading';
+  font-family: 'Lato';
+  font-weight: 200;
+  font-style: italic;
+  src: font-url('lato/Lato-HairlineItalic') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'Lato';
   font-weight: 300;
   font-style: normal;
-  src: font-url('heading/Heading-Pro-Light-trial.ttf') format('truetype');
+  src: font-url('lato/Lato-Light') format('truetype');
 }
 
 @font-face {
 
-  font-family: 'Heading';
+  font-family: 'Lato';
+  font-weight: 300;
+  font-style: italic;
+  src: font-url('lato/Lato-LightItalic') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'Lato';
   font-weight: 400;
   font-style: normal;
-  src: font-url('heading/Heading-Pro-Book-trial.ttf') format('truetype');
+  src: font-url('lato/Lato-Regular') format('truetype');
 }
 
 @font-face {
 
-  font-family: 'Heading';
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: italic;
+  src: font-url('lato/Lato-Italic') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'Lato';
   font-weight: 500;
   font-style: normal;
-  src: font-url('heading/Heading-Pro-Bold-trial.ttf') format('truetype');
+  src: font-url('lato/Lato-Bold') format('truetype');
 }
 
 @font-face {
 
-  font-family: 'Heading';
+  font-family: 'Lato';
+  font-weight: 500;
+  font-style: italic;
+  src: font-url('lato/Lato-BoldItalic') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'Lato';
   font-weight: 600;
   font-style: normal;
-  src: font-url('heading/Heading-Pro-ExtraBold-trial.ttf') format('truetype');
+  src: font-url('lato/Lato-Black') format('truetype');
 }
 
 @font-face {
 
-  font-family: 'Heading';
-  font-weight: 700;
-  font-style: normal;
-  src: font-url('heading/Heading-Pro-Heavy-trial.ttf') format('truetype');
+  font-family: 'Lato';
+  font-weight: 600;
+  font-style: italic;
+  src: font-url('lato/Lato-BlackItalic') format('truetype');
 }
 
-/* Heading - END */
-
-
-
-@font-face {
-
-  font-family: 'OpenSans';
-  font-weight: 400;
-  font-style: normal;
-  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
-}
-
-
-
-@font-face {
-
-  font-family: 'OpenSansCondensed';
-  font-weight: 300;
-  font-style: normal;
-  src: font-url('Open_Sans_Condensed/OpenSansCondensed-Light.ttf') format('truetype');
-}
-
-@font-face {
-
-  font-family: 'OpenSansCondensed';
-  font-weight: 500;
-  font-style: normal;
-  src: font-url('Open_Sans_Condensed/OpenSansCondensed-Bold.ttf') format('truetype');
-}
+/* Lato - END */

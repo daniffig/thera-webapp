@@ -43,40 +43,27 @@ $gc3: #222629;
 $gc4: #474b4f;
 $gc5: #6b6e70;
 
+$gce1: #a0e73d;
+
 /* Colors - END */
 
 body {
 
-  background-color: white;
+  background-color: #eeeeee;
   color: $gc3;
-  font-family: 'OpenSans';
+  font-family: 'Lato', sans-serif;
+}
+
+section#cover {
+
+  h1 {
+
+    font-size: 24vh;
+    margin-top: 0;
+  }
 }
 
 /* https://www.awwwards.com/sites/veille-reputation-squad */
-
-.tryme1 {
-  
-  color: $gc2;
-  // color: white;
-  font-family: 'OpenSansCondensed';
-  font-size: 24px;
-  font-weight: normal;
-  text-transform: lowercase;
-}
-
-.tryme2 {
-
-  font-family: 'Bebas Neue';
-  font-weight: normal;
-  font-size: 24vh;
-}
-
-.tryme3 {
-
-  // color: $gc5;
-  font-size: 18px;
-  text-transform: none;
-}
 
 .panel {
 
@@ -132,5 +119,6 @@ body {
   
   font-size: 8vh;
 
-  color: $gc2;
+  color: $gce1;
 }
+
