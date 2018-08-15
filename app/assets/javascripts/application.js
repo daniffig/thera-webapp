@@ -19,4 +19,5 @@
 //= require bootstrap
 //= require fullpage
 //= require js-routes
+//= require spin
 //= require_tree .

@@ -6,10 +6,78 @@ $light-skin: #ede2ca;
 $shadow-skin: #e0d3b6;
 $shoes: #3b2a0f;
 
+$color1: #f7f3e9;
+$color2: #fdfcf9;
+
+$color3: #7AB3AC;
+$color4: #A8CEBF;
+
+$color5: #0F3C4F;
+$color6: #23465C;
+
+$color7: #0A1D2C;
+
+$color9: #304521;
+
+$c1: #323643;
+$c2: #323643;
+$c3: #93deff;
+$c4: #93deff;
+
+$d1: #283149;
+$d2: #404b69;
+$d3: #00818a;
+$d4: #dbedf3;
+
+/* source: https://colorhunt.co/trendy */
+/* source: http://blog.visme.co/website-color-schemes/ */
+
+$cb1: #1a1a1d;
+$cb2: #4e4e50;
+$cb3: #6f2232;
+$cb4: #950740;
+$cb5: #c3073f;
+
+$s1: #0b0c10;
+$s2: #1f2833;
+$s3: #c5c6c7;
+$s4: #66fcf1;
+$s5: #45a29e;
+
+$f1: #2c3531;
+$f2: #116466;
+$f3: #d9b08c;
+$f4: #ffcb9a;
+$f5: #d1e8e2;
+
+$gc1: #61892f;
+$gc2: #86c232;
+$gc3: #222629;
+$gc4: #474b4f;
+$gc5: #6b6e70;
+
 /* Colors - END */
 
 body {
 
-  font-family: 'Roboto';
-  font-weight: lighter;
+  background-color: $gc3;
+  color: white;
+  font-family: 'Bebas Neue';
+}
+
+.tryme1 {
+  
+  color: $gc2;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+.tryme2 {
+
+  text-transform: uppercase;
+}
+
+.tryme3 {
+
+  font-weight: normal;
 }

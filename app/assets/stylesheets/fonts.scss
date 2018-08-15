@@ -42,3 +42,63 @@
   font-style: normal;
   src: font-url('teen/teen.ttf') format('truetype');
 }
+
+/* Bebas Neue - BEGIN */
+
+@font-face {
+
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+  font-style: normal;
+  src: font-url('bebas_neue/BebasNeue-Regular.otf') format('opentype');
+}
+
+/* Bebas Neue - END */
+
+/* Code - BEGIN */
+
+@font-face {
+
+  font-family: 'Code';
+  font-weight: 100;
+  font-style: normal;
+  src: font-url('code/CODE_Light.otf') format('opentype');
+}
+
+@font-face {
+
+  font-family: 'Code';
+  font-weight: 700;
+  font-style: normal;
+  src: font-url('code/CODE_Bold.otf') format('opentype');
+}
+
+/* Code - END */
+
+/* LemonMilk - BEGIN */
+
+@font-face {
+
+  font-family: 'LemonMilk';
+  font-weight: 100;
+  font-style: normal;
+  src: font-url('lemon_milk/LemonMilklight.otf') format('opentype');
+}
+
+@font-face {
+
+  font-family: 'LemonMilk';
+  font-weight: 400;
+  font-style: normal;
+  src: font-url('lemon_milk/LemonMilk.otf') format('opentype');
+}
+
+@font-face {
+
+  font-family: 'LemonMilk';
+  font-weight: 700;
+  font-style: normal;
+  src: font-url('lemon_milk/LemonMilkbold.otf') format('opentype');
+}
+
+/* LemonMilk - END */
