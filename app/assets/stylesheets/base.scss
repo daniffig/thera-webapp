@@ -6,19 +6,6 @@ $light-skin: #ede2ca;
 $shadow-skin: #e0d3b6;
 $shoes: #3b2a0f;
 
-$color1: #f7f3e9;
-$color2: #fdfcf9;
-
-$color3: #7AB3AC;
-$color4: #A8CEBF;
-
-$color5: #0F3C4F;
-$color6: #23465C;
-
-$color7: #0A1D2C;
-
-$color9: #304521;
-
 $c1: #323643;
 $c2: #323643;
 $c3: #93deff;
@@ -60,24 +47,64 @@ $gc5: #6b6e70;
 
 body {
 
-  background-color: $gc3;
-  color: white;
-  font-family: 'Bebas Neue';
+  background-color: white;
+  color: $gc3;
+  font-family: 'OpenSans';
 }
+
+/* https://www.awwwards.com/sites/veille-reputation-squad */
 
 .tryme1 {
   
   color: $gc2;
+  // color: white;
+  font-family: 'OpenSansCondensed';
+  font-size: 24px;
   font-weight: normal;
   text-transform: lowercase;
 }
 
 .tryme2 {
 
-  text-transform: uppercase;
+  font-family: 'Bebas Neue';
+  font-weight: normal;
+  font-size: 144px;
 }
 
 .tryme3 {
 
-  font-weight: normal;
+  // color: $gc5;
+  font-size: 18px;
+  text-transform: none;
+}
+
+.panel {
+
+  border-color: $gc5;
+
+  .panel-heading {
+
+    background-color: $gc3;
+    border-color: $gc5;
+    color: white;
+    font-family: 'Bebas Neue';
+  }
+
+  .panel-body {
+
+    background-color: $gc4;
+
+    button {
+
+      background-color: $gc2;
+    }
+  }
+
+}
+
+
+
+.professor-thera-img {
+
+  max-height: 60vh;
 }

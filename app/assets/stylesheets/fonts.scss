@@ -60,7 +60,7 @@
 @font-face {
 
   font-family: 'Code';
-  font-weight: 100;
+  font-weight: lighter;
   font-style: normal;
   src: font-url('code/CODE_Light.otf') format('opentype');
 }
@@ -68,7 +68,7 @@
 @font-face {
 
   font-family: 'Code';
-  font-weight: 700;
+  font-weight: bold;
   font-style: normal;
   src: font-url('code/CODE_Bold.otf') format('opentype');
 }
@@ -102,3 +102,92 @@
 }
 
 /* LemonMilk - END */
+
+
+/* Heading - BEGIN */
+
+@font-face {
+
+  font-family: 'Heading';
+  font-weight: 100;
+  font-style: normal;
+  src: font-url('heading/Heading-Pro-Thin-trial.ttf') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'Heading';
+  font-weight: 200;
+  font-style: normal;
+  src: font-url('heading/Heading-Pro-ExtraLight-trial.ttf') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'Heading';
+  font-weight: 300;
+  font-style: normal;
+  src: font-url('heading/Heading-Pro-Light-trial.ttf') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'Heading';
+  font-weight: 400;
+  font-style: normal;
+  src: font-url('heading/Heading-Pro-Book-trial.ttf') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'Heading';
+  font-weight: 500;
+  font-style: normal;
+  src: font-url('heading/Heading-Pro-Bold-trial.ttf') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'Heading';
+  font-weight: 600;
+  font-style: normal;
+  src: font-url('heading/Heading-Pro-ExtraBold-trial.ttf') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'Heading';
+  font-weight: 700;
+  font-style: normal;
+  src: font-url('heading/Heading-Pro-Heavy-trial.ttf') format('truetype');
+}
+
+/* Heading - END */
+
+
+
+@font-face {
+
+  font-family: 'OpenSans';
+  font-weight: 400;
+  font-style: normal;
+  src: font-url('Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+
+
+@font-face {
+
+  font-family: 'OpenSansCondensed';
+  font-weight: 300;
+  font-style: normal;
+  src: font-url('Open_Sans_Condensed/OpenSansCondensed-Light.ttf') format('truetype');
+}
+
+@font-face {
+
+  font-family: 'OpenSansCondensed';
+  font-weight: 500;
+  font-style: normal;
+  src: font-url('Open_Sans_Condensed/OpenSansCondensed-Bold.ttf') format('truetype');
+}
