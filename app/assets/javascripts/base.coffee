@@ -4,9 +4,13 @@
 
 (($) ->
 
+  # https://github.com/lukehaas/Scrollify
+
   $ ->
-    $('div#fullpage').fullpage
-      autoScrolling: true
-      scrollHorizontally: true
+    $.scrollify {
+      section: 'section'
+      scrollSpeed: 1100
+      offset: 0
+    }
 
 ) jQuery

@@ -17,7 +17,7 @@
 //= require turbolinks
 //= require twitter/bootstrap
 //= require bootstrap
-//= require fullpage
 //= require js-routes
 //= require spin
+//= require jquery.scrollify
 //= require_tree .
