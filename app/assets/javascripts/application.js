@@ -18,6 +18,6 @@
 //= require twitter/bootstrap
 //= require bootstrap
 //= require js-routes
-//= require spin
+//= require jquery.modal
 //= require jquery.scrollify
 //= require_tree .

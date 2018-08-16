@@ -1,32 +1,23 @@
 <section class="section">
   <div class="container">
+    <div class="modal">          
+      <iframe src="https://www.youtube.com/embed/k2qgadSvNyU" height="70vh" frameborder="0" allowfullscreen="true"></iframe>
+    </div>
     <div class="row">
       <div class="col-xs-12">
-        <%= User.all.collect { |u| u.name }.to_s %>
-        <h1>Welcome <%= @user.name %></h1>
-        <p><%= @user.id %></p>
-        <!-- FIXME
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com//embed/91XPH_6pL_0"></iframe>
-        </div>
-        -->
+        <h2>Capture #1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <div class="panel panel-info">
-          <div class="panel-heading">
-            <h3>Capture #1</h3>
-          </div>
-          <div class="panel-body">
-            <%= simple_form_for @user.photos.new do |f| %>
-              <%= f.input :exercise_id, as: :hidden, input_html: { value: 1 } %>
-              <%= f.input :stage_id, as: :hidden, input_html: { value: 1 } %>
-              <%= f.input :photo, as: :file, input_html: { accept: 'image/*', capture: 'camera' } %>
-              <button type="button" class="submit-photo-button">Send</button>
-            <% end %>
-          </div>        
-        </div>
+        <%= simple_form_for @user.photos.new do |f| %>
+          <%= f.input :exercise_id, as: :hidden, input_html: { value: 1 } %>
+          <%= f.input :stage_id, as: :hidden, input_html: { value: 1 } %>
+          <%= f.input :photo, as: :file, input_html: { accept: 'image/*', capture: 'camera', class: 'inputfile hidden' } %>
+          <button type="button" class="upload-photo-button">Capture!</button>
+          <button type="button" class="submit-photo-button">Send</button>
+        <% end %>
       </div>
     </div>
   </div>

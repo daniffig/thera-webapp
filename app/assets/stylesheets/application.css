@@ -15,6 +15,7 @@
  *= require font-awesome
  *= require fonts
  *= require spin
+ *= require jquery.modal
  *= require base
  *= require bootstrap_and_overrides
  *= require_self

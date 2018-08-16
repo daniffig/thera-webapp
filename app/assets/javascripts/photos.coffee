@@ -5,6 +5,11 @@
 (($) ->
 
   $ ->
+    $('button.upload-photo-button').on 'click', (e) ->
+      $input = $ $(e.target).closest('form').find('input[type="file"]')[0]
+
+      $('.modal').modal()
+
     $('button.submit-photo-button').on 'click', (e) ->
       form = $(e.target).closest('form')[0]
 
