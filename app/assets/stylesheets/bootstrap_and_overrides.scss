@@ -13,13 +13,13 @@ h1, h2 {
 
 h1 {
 
-  font-size: 4rem;
+  // font-size: 4rem;
 }
 
 p {
 
-  font-size: 1.6em;
-  font-weight: 300;
+  // font-size: 1.6em;
+  // font-weight: 300;
   text-align: justify;
 }
 
@@ -31,9 +31,29 @@ $gc3: #222629;
 $gc4: #474b4f;
 $gc5: #6b6e70;
 
+.btn {
+
+  border: 0;
+  border-radius: 0;
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 20px;
+}
+
+
+
+$f1: #2c3531;
+$f2: #116466;
+$f3: #d9b08c;
+$f4: #ffcb9a;
+$f5: #d1e8e2;
+
 .btn.btn-default {
 
-  background-color: $gc2;
-  color: white;  
-  font-weight: bolder;
+  // background-color: $gc1;
+  background-color: $f2;
+  // background-color: #688bff;
+  color: white;
+  width: 100%;
 }

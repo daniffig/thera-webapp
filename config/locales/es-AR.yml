@@ -1,0 +1,17 @@
+es-AR:
+
+  activerecord:
+    attributes:
+      user:
+        name: 'Nombre'
+        email: 'Correo electrónico'
+
+  views:
+    users:
+      new:       
+        actions:
+          take_part: '¡Participar!' 
+        placeholders:
+          name: 'Alan Therapopulos'
+          email: 'alan.t@project-thera.org'
+        title: '¡Bienvenido al proyecto Thera!'        
