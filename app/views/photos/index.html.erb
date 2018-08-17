@@ -1,24 +1,26 @@
-<section class="section">
-  <div class="container">
-    <div class="modal">          
-      <iframe src="https://www.youtube.com/embed/k2qgadSvNyU" height="70vh" frameborder="0" allowfullscreen="true"></iframe>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <h1>Capture #1</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<main>
+  <%= render 'tutorial' %>
+
+  <section class="section">
+    <div class="container">
+      <div class="modal embed-responsive">          
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k2qgadSvNyU" height="70vh" frameborder="0" allowfullscreen="true"></iframe>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+          <h1>Capture #1</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <%= simple_form_for @user.photos.new do |f| %>
+            <%= f.input :exercise_id, as: :hidden, input_html: { value: 1 } %>
+            <%= f.input :stage_id, as: :hidden, input_html: { value: 1 } %>
+            <%= f.input :photo, as: :file, label: false, input_html: { accept: 'image/*', capture: 'camera', class: 'inputfile hidden' } %>
+            <%= button_tag t('views.photos.index.object_actions.watch_video'), type: :button, class: 'btn btn-step btn-1st-step', id: 'watch-video-button' %>
+            <%= button_tag t('views.photos.index.object_actions.take_photo'), type: :button, class: 'btn btn-step btn-default', id: 'take-photo-button' %>
+            <%= button_tag t('views.photos.index.object_actions.send_photo'), type: :button, class: 'btn btn-step btn-default', id: 'send-photo-button' %>
+          <% end %>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <%= simple_form_for @user.photos.new do |f| %>
-          <%= f.input :exercise_id, as: :hidden, input_html: { value: 1 } %>
-          <%= f.input :stage_id, as: :hidden, input_html: { value: 1 } %>
-          <%= f.input :photo, as: :file, input_html: { accept: 'image/*', capture: 'camera', class: 'inputfile hidden' } %>
-          <button type="button" class="upload-photo-button">Capture!</button>
-          <button type="button" class="submit-photo-button">Send</button>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+
+</main>

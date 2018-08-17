@@ -5,12 +5,19 @@
 (($) ->
 
   $ ->
-    $('button.upload-photo-button').on 'click', (e) ->
-      $input = $ $(e.target).closest('form').find('input[type="file"]')[0]
+    $('button#watch-video-button').on 'click', (e) ->
 
       $('.modal').modal()
 
-    $('button.submit-photo-button').on 'click', (e) ->
+
+    $('button#take-photo-button').on 'click', (e) ->
+
+      $input = $ $(e.target).closest('form').find('input[type="file"]')[0]
+
+      $input.trigger 'click'
+
+
+    $('button.send-photo-button').on 'click', (e) ->
       form = $(e.target).closest('form')[0]
 
       $.ajax

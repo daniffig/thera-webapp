@@ -31,17 +31,6 @@ $gc3: #222629;
 $gc4: #474b4f;
 $gc5: #6b6e70;
 
-.btn {
-
-  border: 0;
-  border-radius: 0;
-  font-family: 'Bebas Neue';
-  font-size: 20px;
-  font-weight: 500;
-  padding: 10px 20px;
-}
-
-
 
 $f1: #2c3531;
 $f2: #116466;
@@ -49,11 +38,32 @@ $f3: #d9b08c;
 $f4: #ffcb9a;
 $f5: #d1e8e2;
 
-.btn.btn-default {
+.btn {
 
-  // background-color: $gc1;
   background-color: $f2;
-  // background-color: #688bff;
+  border: 0;
+  border-radius: 0;
   color: white;
-  width: 100%;
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 20px;
+
+  &.btn-default {
+
+    background-color: $f2;
+    color: white;
+    width: 100%;
+  }
+
+  &.btn-step {
+
+    margin-bottom: 1vh;
+    text-align: left;
+    width: 100%;
+  }
+
+  &.btn-1st-step {
+
+  }
 }
