@@ -18,6 +18,8 @@
 //= require twitter/bootstrap
 //= require bootstrap
 //= require js-routes
+//= require jquery.fakeLoader.custom
 //= require jquery.modal
 //= require jquery.scrollify
+//= require toastr
 //= require_tree .

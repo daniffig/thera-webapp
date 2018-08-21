@@ -2,6 +2,7 @@
   <%= render 'tutorial' %>
 
   <section class="section">
+    <div id="loader"></div>
     <div class="container">
       <div class="modal embed-responsive">          
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k2qgadSvNyU" height="70vh" frameborder="0" allowfullscreen="true"></iframe>
@@ -14,9 +15,9 @@
             <%= f.input :exercise_id, as: :hidden, input_html: { value: 1 } %>
             <%= f.input :stage_id, as: :hidden, input_html: { value: 1 } %>
             <%= f.input :photo, as: :file, label: false, input_html: { accept: 'image/*', capture: 'camera', class: 'inputfile hidden' } %>
-            <%= button_tag t('views.photos.index.object_actions.watch_video'), type: :button, class: 'btn btn-step btn-1st-step', id: 'watch-video-button' %>
-            <%= button_tag t('views.photos.index.object_actions.take_photo'), type: :button, class: 'btn btn-step btn-default', id: 'take-photo-button' %>
-            <%= button_tag t('views.photos.index.object_actions.send_photo'), type: :button, class: 'btn btn-step btn-default', id: 'send-photo-button' %>
+            <%= button_tag t('views.photos.index.object_actions.watch_video'), type: :button, class: 'btn btn-step show-instructions-button' %>
+            <%= button_tag t('views.photos.index.object_actions.take_photo'), type: :button, class: 'btn btn-step take-photo-button' %>
+            <%= button_tag t('views.photos.index.object_actions.send_photo'), type: :button, class: 'btn btn-step btn-default send-photo-button' %>
           <% end %>
         </div>
       </div>
