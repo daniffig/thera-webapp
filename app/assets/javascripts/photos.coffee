@@ -23,11 +23,14 @@
 
     $('button.send-photo-button').on 'click', (e) ->
 
-      colors = ['#3d1166', '#661165', '#121166']
+      toastr.remove()
 
-      $loader = $('div#loader').fakeLoader {
+      # colors = ['#3d1166', '#661165', '#121166', 'rgb(26, 188, 156)']
+      colors = ['rgb(26, 188, 156)', 'rgb(155, 89, 182)', 'rgb(52, 73, 94)', 'rgb(52, 152, 219)', 'rgb(46, 204, 113)']
+
+      $loader = $('div#loader').fakeLoader {        
         bgColor: colors[Math.floor(Math.random() * colors.length)]
-        spinner: 'spinner1'
+        spinner: 'spinner3'
       }
 
       $loader.fadeIn()
@@ -41,14 +44,15 @@
         processData: false
         method: 'POST'
       .done (data) ->
-        $loader.fadeOut 1000, ->
-          toastr.success '¡Muchas gracias!', '¡Recibimos tu imagen!'
+        setTimeout ( ->
+          $loader.fadeOut 1000, ->
+            toastr.success '¡Muchas gracias!', '¡Recibimos tu imagen!'
+        ), 1000
       .fail ->
         setTimeout ( ->
           $loader.fadeOut 1000, ->
             toastr.error 'Por favor, intentalo nuevamente.', 'Ocurrió un error'
-        ), 2000
-      .always ->
+        ), 1000
 
 
 ) jQuery
