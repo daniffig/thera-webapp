@@ -10,7 +10,7 @@ es-AR:
     photos:
       index:
         object_actions:
-          watch_video: 'Mirá el video con las instrucciones'
+          watch_video: 'Ver video'
           take_photo: 'Tomá tu foto'
           send_photo: '¡Enviá tu foto!'
     users:

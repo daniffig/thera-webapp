@@ -49,6 +49,11 @@ $f5: #d1e8e2;
   font-weight: 500;
   padding: 10px 20px;
 
+  &:hover, &:active {
+
+    color: white;
+  }
+
   &.btn-default {
 
     background-color: $f2;
@@ -61,9 +66,5 @@ $f5: #d1e8e2;
     margin-bottom: 1vh;
     text-align: left;
     width: 100%;
-  }
-
-  &.btn-1st-step {
-
   }
 }

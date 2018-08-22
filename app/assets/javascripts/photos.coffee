@@ -9,7 +9,7 @@
     toastr.options.preventDuplicates = true
     toastr.options.progressBar = true
 
-    $('button.show-instructions-button').on 'click', (e) ->
+    $('button.watch-video-button').on 'click', (e) ->
 
       $('.modal').modal()
 
@@ -21,9 +21,20 @@
       $input.trigger 'click'
 
 
-    $('button.send-photo-button').on 'click', (e) ->
+    $('button.send-photo-button').on 'click', (e) ->   
 
       toastr.remove()
+
+      form = $(e.target).closest('form')[0]
+
+      file = $(form).find('input[type="file"]').val()
+
+      unless file
+        toastr.warning 'Aún no se ha cargado ninguna foto.', '¡Toma tu foto!'
+
+        return
+
+
 
       # colors = ['#3d1166', '#661165', '#121166', 'rgb(26, 188, 156)']
       colors = ['rgb(26, 188, 156)', 'rgb(155, 89, 182)', 'rgb(52, 73, 94)', 'rgb(52, 152, 219)', 'rgb(46, 204, 113)']
@@ -35,7 +46,9 @@
 
       $loader.fadeIn()
 
-      form = $(e.target).closest('form')[0]
+      console.log file
+      console.log file.empty?
+      console.log file.present?
 
       $.ajax
         url: Routes.photos_path
