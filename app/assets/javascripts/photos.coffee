@@ -9,10 +9,6 @@
     toastr.options.preventDuplicates = true
     toastr.options.progressBar = true
 
-    $('button.watch-video-button').on 'click', (e) ->
-
-      $('.modal').modal()
-
 
     $('button.take-photo-button').on 'click', (e) ->
 
@@ -34,8 +30,6 @@
 
         return
 
-
-
       # colors = ['#3d1166', '#661165', '#121166', 'rgb(26, 188, 156)']
       colors = ['rgb(26, 188, 156)', 'rgb(155, 89, 182)', 'rgb(52, 73, 94)', 'rgb(52, 152, 219)', 'rgb(46, 204, 113)']
 
@@ -45,10 +39,6 @@
       }
 
       $loader.fadeIn()
-
-      console.log file
-      console.log file.empty?
-      console.log file.present?
 
       $.ajax
         url: Routes.photos_path

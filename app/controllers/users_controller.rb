@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.valid?
       sign_in(@user)
 
-      redirect_to photos_url
+      redirect_to phase_url(1)
     else
       render :new
     end

@@ -1,0 +1,20 @@
+section.section
+
+  .container
+    .row
+      .col-xs-12.col-md-8.col-md-offset-2
+        h1 = stage.name
+        p = stage.description
+        = simple_form_for(@user.photos.new) do |f|
+          = f.input :stage_id, as: :hidden, input_html: { value: stage.id }
+          = f.input :photo, as: :file, required: true, label: false, input_html: { accept: 'image/*', capture: 'camera', class: 'inputfile hidden' }
+      
+        - if (video_link = stage.video_link).present?
+          = link_to t('views.photos.index.object_actions.watch_video'), "##{stage.modal_id}", class: 'btn btn-step watch-video-button', rel: 'modal:open'
+
+          .modal.embed-responsive id="#{stage.modal_id}"
+            iframe src="#{video_link}" allowfullscreen='true'
+
+        = button_tag t('views.photos.index.object_actions.take_photo'), type: :button, class: 'btn btn-step take-photo-button', data: {}
+        = button_tag t('views.photos.index.object_actions.send_photo'), type: :button, class: 'btn btn-step btn-default send-photo-button'
+

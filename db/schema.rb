@@ -10,18 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_09_144311) do
+ActiveRecord::Schema.define(version: 2018_08_23_184311) do
+
+  create_table "exercises", force: :cascade do |t|
+    t.integer "phase_id"
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["phase_id"], name: "index_exercises_on_phase_id"
+  end
+
+  create_table "phases", force: :cascade do |t|
+    t.integer "number", null: false
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["number"], name: "index_phases_on_number"
+  end
 
   create_table "photos", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "exercise_id", null: false
     t.integer "stage_id", null: false
     t.string "photo", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["exercise_id"], name: "index_photos_on_exercise_id"
     t.index ["stage_id"], name: "index_photos_on_stage_id"
     t.index ["user_id"], name: "index_photos_on_user_id"
+  end
+
+  create_table "stages", force: :cascade do |t|
+    t.integer "exercise_id", null: false
+    t.string "name", null: false
+    t.string "description"
+    t.string "video_link"
+    t.integer "order", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["exercise_id"], name: "index_stages_on_exercise_id"
   end
 
   create_table "users", force: :cascade do |t|
