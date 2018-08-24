@@ -153,25 +153,15 @@ h1.welcome {
 
 .modal {
 
+  height: 45vw;
   overflow: visible;
   padding: 0;
-}
+  width: 80vw;
 
-@media (orientation: landscape) {
+  iframe {
 
-  .modal {
-  
-    height: 9vmin;
-    width: 16vmin;
-  }
-}
-
-@media (orientation: portrait) {
-
-  .modal {
-  
-    height: 16vmin;
-    width: 9vmin;
+    height: 100%;
+    width: 100%;
   }
 }
 

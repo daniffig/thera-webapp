@@ -3,11 +3,11 @@ class Stage < ApplicationRecord
 
   has_many :photos
 
-  def modal_id
-    "p#{phase.id}e#{exercise.id}s#{id}-video-modal"
-  end
-
   def phase
     exercise.phase
+  end
+
+  def base_id
+    "phase_#{phase.id}__exercise_#{exercise.id}__stage_#{id}"
   end
 end

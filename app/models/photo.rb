@@ -9,6 +9,6 @@ class Photo < ApplicationRecord
   end
 
   def new_filename(original_filename)
-    "#{exercise_id}_#{stage_id}_#{Time.now.nsec}#{File.extname(original_filename)}"
+    "#{stage.base_id}__#{Time.now.nsec}#{File.extname(original_filename)}"
   end
 end
