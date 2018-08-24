@@ -7,6 +7,7 @@
 
   $ ->
 
+    toastr.options.positionClass = 'toast-top-center'
     toastr.options.preventDuplicates = true
     toastr.options.progressBar = true
 
