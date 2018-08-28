@@ -49,6 +49,19 @@ $h1: #3d1166;
 $h2: #661165;
 $h3: #121166;
 
+$r1: #668aa1;
+$r2: #557588;
+$r3: #70aac0;
+$r4: #4a4241;
+$r5: #ffde16;
+$r6: #fcb040;
+
+
+
+
+
+
+
 /* Colors - END */
 
 html {
@@ -61,6 +74,12 @@ body {
   color: $gc3;
   font-family: 'Lato', sans-serif;
   font-size: 1.8rem;
+}
+
+section {
+
+  min-height: 100vh;
+  padding-bottom: 2vh;
 }
 
 section#cover {
@@ -102,7 +121,7 @@ section#cover {
 
 .professor-thera-img {
 
-  max-height: 60vh;
+  max-height: 50vh;
 }
 
 @keyframes slide-down {
@@ -125,7 +144,7 @@ section#cover {
   animation-name: slide-down;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-  color: $f2;
+  color: $r3;
 
   // color: #688bff;
   position: relative;  
@@ -167,7 +186,7 @@ h1.welcome {
 
 section#take-part-section {
   // background-color: rgba(196, 94, 255, 0.144);
-  background-image: linear-gradient(#eeeeee00, rgba($f2, 0.6));
+  background-image: linear-gradient(#eeeeee00, rgba($r2, 0.6));
 }
 
 main::after {

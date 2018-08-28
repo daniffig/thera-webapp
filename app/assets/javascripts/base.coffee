@@ -6,11 +6,11 @@
 
   # https://github.com/lukehaas/Scrollify
 
-  $ ->
-    $.scrollify {
-      section: 'section'
-      scrollSpeed: 1100
-      offset: 0
-    }
+  # $ ->
+  #   $.scrollify {
+  #     section: 'section'
+  #     scrollSpeed: 1100
+  #     offset: 0
+  #   }
 
 ) jQuery

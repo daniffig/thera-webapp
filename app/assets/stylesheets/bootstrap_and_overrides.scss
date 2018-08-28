@@ -38,9 +38,17 @@ $f3: #d9b08c;
 $f4: #ffcb9a;
 $f5: #d1e8e2;
 
+
+$r1: #668aa1;
+$r2: #557588;
+$r3: #70aac0;
+$r4: #4a4241;
+$r5: #ffde16;
+$r6: #fcb040;
+
 .btn {
 
-  background-color: $f2;
+  background-color: $r1;
   border: 0;
   border-radius: 0;
   color: white;
@@ -56,7 +64,7 @@ $f5: #d1e8e2;
 
   &.btn-default {
 
-    background-color: $f2;
+    background-color: $r1;
     color: white;
     width: 100%;
   }
