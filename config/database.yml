@@ -20,9 +20,6 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: localhost
-  user: postgres
-  password: mysecretpassword
 
 development:
   <<: *default
@@ -84,5 +81,5 @@ test:
 production:
   <<: *default
   database: thera-webapp_production
-  username: postgresql-app
+  username: thera-webapp
   password: <%= ENV['POSTGRESQL-APP_DATABASE_PASSWORD'] %>
